@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#inp::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #FFFF00;
+    opacity: 1; /* Firefox */
+}
+  
+#inp::-ms-input-placeholder { /* Microsoft Edge */
+    color: #FFFF00;
+    opacity: 1;
+}
+
+.main{
+    text-align: center;
+    color: #007fff;
+    height: 100vh;
+}
+
+.interno h1{
+    animation: colorT infinite 3s ease;
+}
+
+.interno{
+    width: 100%;
+    background-color: black;
+    box-shadow: 0 0 20px black;
+    margin: auto auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculadora{
+    width: max-content;
+    background-color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    animation: breathing infinite 3s ease-in-out;
+}
+.visor #inp{
+    background-color: black;
+    width: 100%;
+    text-align: right;
+    border: none;
+    color: #FFFF00;
+    margin-bottom: 8px;
+    padding: 8px 0;
+}
+
+.visor #resultado{
+    color: #FFFF00;
+    margin-bottom: 8px;
+    padding: 8px 0;
+}
+
+.visor{
+    width: 100%;
+    text-align: right;
+    padding: 0 8px;
+}
+
+.tabela{
+    background-color: black;
+}
+
+input[type="button"]{
+    color: #FFFF00;
+    background-color: rgb(25, 25, 25);
+    width: 100%;
+    padding: 15px;
+    height: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    display: flow-root;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+}
+input[type="button"].clr{
+    color: red;
+}
+input[type="button"].zero{
+    width: 300%;
+    align-content: center;
+}
+input[type="button"].ig{
+    width: 207%;
+    align-content: center;
+    color: black;
+    background-color: #40e0d0;
+    transition: all 0.2s linear;
+}
+input[type="button"].colorBlue{
+    color: #40e0d0;
+}
+input[type="button"]:hover{
+    background-color: #555;
+    box-shadow: 0px 0px 0px 2px #000 inset;
+}
+
+input[type="button"].ig:hover{
+    background-color: #40e0d0;
+    opacity: 0.8;
+    box-shadow: 0px 0px 0px 2px #000 inset;
+}
+
+@keyframes breathing {
+    0%{
+        box-shadow: 0 0 30px rgb(79, 79, 79);
+    }
+    50%{
+        box-shadow: 0 0 0px rgb(79, 79, 79);
+    }
+    100%{
+        box-shadow: 0 0 30px rgb(79, 79, 79);
+    }
+}
+
+@keyframes colorT {
+    0%{
+        color: red;
+    }
+    9%{
+        color: orangered;
+    }
+    18%{
+        color: orange;
+    }
+    27%{
+        color: yellow;
+    }
+    36%{
+        color: yellowgreen;
+    }
+    45%{
+        color: greenyellow;
+    }
+    54%{
+        color: cyan;
+    }
+    63%{
+        color: blue;
+    }
+    72%{
+        color: purple;
+    }
+    81%{
+        color: magenta;
+    }
+    90%{
+        color: rgb(255, 0, 128);
+    }
+    100%{
+        color: red;
+    }
+}
+
+@keyframes inputOpacity {
+    
+}
